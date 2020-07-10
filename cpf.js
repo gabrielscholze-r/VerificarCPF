@@ -1,3 +1,12 @@
+function char(){
+    var data = document.getElementById("verify").value
+    var reg = new RegExp('^[0-99999999999]$')
+    var test = reg.test(data.substring(data.length-1, data.length))
+   
+    if (test != true){
+        return document.getElementById("verify").value = data.substring(0, data.length-1)
+    }
+}
 function opacidade(){
     document.getElementById("insta").style.transition = "0.3s"
     document.getElementById("dev").style.transition = "0.3s"
@@ -8,28 +17,12 @@ function opacidade2(){
     document.getElementById("insta").style.opacity = "50%"
     document.getElementById("dev").style.opacity = "0%"
 }
-
-function formataCPF(cpf) {
-    const elementoAlvo = cpf
-    const cpfAtual = cpf.value   
-    
-    let cpfAtualizado;
-    
-    cpfAtualizado = cpfAtual.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, 
-     function( regex, argumento1, argumento2, argumento3, argumento4 ) {
-            return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
-    })  
-    elementoAlvo.value = cpfAtualizado; 
-    }  
-
 function verificar(){
     var cpf = document.getElementById("verify").value
-    
     var cpf2 = cpf.length
     if (cpf2 < 11 || cpf2 > 11){
         document.getElementById("verify").value = ""
         return alert("Valor inválido")
-        
     }
     var a = cpf.substring(0,1)
     var b = cpf.substring(1,2)
@@ -46,7 +39,6 @@ function verificar(){
     if (isNaN(multiply)==true){
         document.getElementById("verify").value = ""
         return alert("Valor Invalido")
-        
     }
     if (cpf2 == 11){
         var a = cpf.substring(0,1)*10
@@ -81,13 +73,10 @@ function verificar(){
                 alert(`CPF ${cpf} inválido!`)
                 document.getElementById("verify").value = ""
             }
-        
-
         }
         if (soma21 != cpf.substring(9, 10)) {
             alert(`CPF ${cpf} inválido!`)
             document.getElementById("verify").value = ""
         }
-        
     }
 }
