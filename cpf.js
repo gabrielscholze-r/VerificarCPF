@@ -1,6 +1,6 @@
 function char(){
     var data = document.getElementById("verify").value
-    var reg = new RegExp('^[0-99999999999]$')
+    var reg = new RegExp('^[0-9]$')
     var test = reg.test(data.substring(data.length-1, data.length))
    
     if (test != true){
@@ -24,22 +24,8 @@ function verificar(){
         document.getElementById("verify").value = ""
         return alert("Valor inválido")
     }
-    var a = cpf.substring(0,1)
-    var b = cpf.substring(1,2)
-    var c = cpf.substring(2,3)
-    var d = cpf.substring(3,4)
-    var e = cpf.substring(4,5)
-    var f = cpf.substring(5,6)
-    var g = cpf.substring(6,7)
-    var h = cpf.substring(7,8)
-    var i = cpf.substring(8,9)
-    var x= cpf.substring(9, 10)
-    var y = cpf.substring(10, 11)
-    var multiply = a*b*c*d*e*f*g*h*i*x*y
-    if (isNaN(multiply)==true){
-        document.getElementById("verify").value = ""
-        return alert("Valor Invalido")
-    }
+   
+    
     if (cpf2 == 11){
         var a = cpf.substring(0,1)*10
         var b = cpf.substring(1,2)*9
@@ -51,7 +37,10 @@ function verificar(){
         var h = cpf.substring(7,8)*3
         var i = cpf.substring(8,9)*2
         var soma = a+b+c+d+e+f+g+h+i
-        var soma21 = (soma*10) % 11
+        var soma21 = 11 - (soma % 11)
+        if (soma21>9){
+            var soma21 = 0
+        }
         if (soma21 == cpf.substring(9, 10)) {
             var a = cpf.substring(0,1)*11
             var b = cpf.substring(1,2)*10
@@ -64,7 +53,10 @@ function verificar(){
             var i = cpf.substring(8,9)*3
             var j = cpf.substring(9, 10)*2
             var soma1 = a+b+c+d+e+f+g+h+i+j
-            var soma22 = (soma1*10) % 11
+            var soma22 = 11 - (soma1 % 11)
+            if (soma22>9){
+                var soma22 = 0
+            }
             if (soma22 == cpf.substring(10, 11)) {
                 alert(`CPF ${cpf} válido!`)
                 document.getElementById("verify").value = ""
