@@ -1,0 +1,72 @@
+
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.cpf{
+    font-size: 1000px;
+}
+input{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 7px;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10%;
+    width: 50%;
+    font-size: 100%;
+    
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(1, 26, 53, 0.8) url(./cpfs.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+.box{
+    background-color: rgba(186, 238, 251, 0);
+    width:80%;
+    height:70%;
+    
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font: 'Roboto', sans-serif; 
+
+    margin: 0px;
+}
+.minibox{
+    margin-top: 10%;
+}
+button.verify{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:200px;
+    height: 50px;
+    cursor: pointer;
+}
+img#insta{ 
+    margin-top: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 8%;
+    opacity: 50%;
+    cursor: pointer;
+    
+    
+}
+p#dev{
+    color: white;
+    text-align: center;
+    opacity: 0%;
+}
