@@ -24,7 +24,7 @@ input{
 .container {
     width: 100vw;
     height: 100vh;
-    background-image: url(/cpfs.png);
+    background-image: url(./cpfs.png);
     background-color: rgba(1, 26, 53, 0.8);
     background-size: 100%;
     overflow: auto;
