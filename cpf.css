@@ -24,11 +24,14 @@ input{
 .container {
     width: 100vw;
     height: 100vh;
-    background: rgba(1, 26, 53, 0.8) url(./cpfs.png);
+    background-image: url(/cpfs.png);
+    background-color: rgba(1, 26, 53, 0.8);
+    background-size: 100%;
+    overflow: auto;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    background-size: cover;
 }
 .box{
     background-color: rgba(186, 238, 251, 0);
